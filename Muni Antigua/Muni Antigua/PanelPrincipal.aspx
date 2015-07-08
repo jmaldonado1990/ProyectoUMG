@@ -104,6 +104,11 @@
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id3', 'Paginas/Administracion/MantenimientoPersona.aspx','Registro de Vecinos',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
+                                     <ext:MenuItem ID="MenuItem4" runat="server" Text="Registro de Contadores" Icon="ApplicationFormAdd">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id4', 'Paginas/Administracion/MantenimientoContador.aspx','Registro de Contadores',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
                                 </Items>
                                 <Listeners>
                                 </Listeners>

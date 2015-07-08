@@ -40,7 +40,7 @@ Public Class MantenimientoPersona
         queryString &= ("&idPersona=" & id_persona)
         Dim win = New Window With {.ID = "WindowEdicionVecino", _
                                     .Width = Unit.Pixel(550), _
-                                    .Height = Unit.Pixel(500), _
+                                    .Height = Unit.Pixel(480), _
                                     .Title = titulo, _
                                     .Modal = True, _
                                     .AutoRender = False, _

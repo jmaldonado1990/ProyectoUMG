@@ -11,16 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class MantenimientoPersona
-
-    '''<summary>
-    '''Control Head1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Head1 As Global.System.Web.UI.HtmlControls.HtmlHead
+Partial Public Class MantenimientoContador
 
     '''<summary>
     '''Control form1.
@@ -50,13 +41,13 @@ Partial Public Class MantenimientoPersona
     Protected WithEvents Viewport1 As Global.Ext.Net.Viewport
 
     '''<summary>
-    '''Control gridListadoVecinos.
+    '''Control gridListadoContadores.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents gridListadoVecinos As Global.Ext.Net.GridPanel
+    Protected WithEvents gridListadoContadores As Global.Ext.Net.GridPanel
 
     '''<summary>
     '''Control Toolbar1.
@@ -113,13 +104,13 @@ Partial Public Class MantenimientoPersona
     Protected WithEvents agregar As Global.Ext.Net.Button
 
     '''<summary>
-    '''Control StoreVecinos.
+    '''Control StoreContadores.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents StoreVecinos As Global.Ext.Net.Store
+    Protected WithEvents StoreContadores As Global.Ext.Net.Store
 
     '''<summary>
     '''Control Model3.
@@ -149,22 +140,22 @@ Partial Public Class MantenimientoPersona
     Protected WithEvents Column1 As Global.Ext.Net.Column
 
     '''<summary>
-    '''Control txtFiltroDPI.
+    '''Control txtFiltroMarca.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtFiltroDPI As Global.Ext.Net.TextField
+    Protected WithEvents txtFiltroMarca As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control txtLimpiarDPI.
+    '''Control txtLimpiarMarca.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtLimpiarDPI As Global.Ext.Net.ClearButton
+    Protected WithEvents txtLimpiarMarca As Global.Ext.Net.ClearButton
 
     '''<summary>
     '''Control Column2.
@@ -176,22 +167,22 @@ Partial Public Class MantenimientoPersona
     Protected WithEvents Column2 As Global.Ext.Net.Column
 
     '''<summary>
-    '''Control txtFiltroNombre.
+    '''Control txtFiltroModelo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtFiltroNombre As Global.Ext.Net.TextField
+    Protected WithEvents txtFiltroModelo As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control txtLimpiarNombre.
+    '''Control txtLimpiarModelo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtLimpiarNombre As Global.Ext.Net.ClearButton
+    Protected WithEvents txtLimpiarModelo As Global.Ext.Net.ClearButton
 
     '''<summary>
     '''Control Column3.
@@ -203,22 +194,22 @@ Partial Public Class MantenimientoPersona
     Protected WithEvents Column3 As Global.Ext.Net.Column
 
     '''<summary>
-    '''Control txtFiltroApellido.
+    '''Control txtFiltroNumero.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtFiltroApellido As Global.Ext.Net.TextField
+    Protected WithEvents txtFiltroNumero As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control txtLimpiarApellido.
+    '''Control txtLimpiarNumero.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtLimpiarApellido As Global.Ext.Net.ClearButton
+    Protected WithEvents txtLimpiarNumero As Global.Ext.Net.ClearButton
 
     '''<summary>
     '''Control Column4.
@@ -230,49 +221,22 @@ Partial Public Class MantenimientoPersona
     Protected WithEvents Column4 As Global.Ext.Net.Column
 
     '''<summary>
-    '''Control txtFiltroTelefono.
+    '''Control txtFiltroEstado.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtFiltroTelefono As Global.Ext.Net.TextField
+    Protected WithEvents txtFiltroEstado As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control txtLimpiarTelefono.
+    '''Control txtLimpiarEstado.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtLimpiarTelefono As Global.Ext.Net.ClearButton
-
-    '''<summary>
-    '''Control Column5.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column5 As Global.Ext.Net.Column
-
-    '''<summary>
-    '''Control txtFiltroCorreo.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtFiltroCorreo As Global.Ext.Net.TextField
-
-    '''<summary>
-    '''Control txtLimpiarCorreo.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtLimpiarCorreo As Global.Ext.Net.ClearButton
+    Protected WithEvents txtLimpiarEstado As Global.Ext.Net.ClearButton
 
     '''<summary>
     '''Control CommandColumn1.

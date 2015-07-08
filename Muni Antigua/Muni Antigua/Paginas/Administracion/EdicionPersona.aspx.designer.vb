@@ -41,13 +41,13 @@ Partial Public Class EdicionPersona
     Protected WithEvents Panel1 As Global.Ext.Net.Panel
 
     '''<summary>
-    '''Control panelMantenimientoPersona.
+    '''Control FormMantenimientoPersona.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents panelMantenimientoPersona As Global.Ext.Net.FormPanel
+    Protected WithEvents FormMantenimientoPersona As Global.Ext.Net.FormPanel
 
     '''<summary>
     '''Control FieldSet1.
@@ -140,13 +140,22 @@ Partial Public Class EdicionPersona
     Protected WithEvents cboGenero As Global.Ext.Net.ComboBox
 
     '''<summary>
-    '''Control dtFechaNac.
+    '''Control dtFecha.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents dtFechaNac As Global.Ext.Net.DateField
+    Protected WithEvents dtFecha As Global.Ext.Net.DateField
+
+    '''<summary>
+    '''Control lblCerrarW.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblCerrarW As Global.Ext.Net.Label
 
     '''<summary>
     '''Control StatusBar1.

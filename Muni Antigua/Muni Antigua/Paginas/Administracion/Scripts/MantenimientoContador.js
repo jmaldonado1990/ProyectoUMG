@@ -7,8 +7,8 @@ cerrarVentanaVecinos = function () {
     App.WindowEdicionVecino.close();
 },
 
-AgregarNuevoVecino = function () {
-    App.direct.crearVentanaEdicionVecino('nuevo', 0);
+AgregarNuevoContador = function () {
+    App.direct.crearVentanaEdicionContador('nuevo', 0);
 },
 
 Filtrar = function (columna) {

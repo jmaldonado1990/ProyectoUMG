@@ -40,7 +40,6 @@ Public Class EdicionPersona
 #End Region
 
 #Region "Obtener Parametros"
-
     Private Sub obtenerParametros()
         Dim parametro = String.Empty
         parametro = Request.QueryString.Get("accion")
