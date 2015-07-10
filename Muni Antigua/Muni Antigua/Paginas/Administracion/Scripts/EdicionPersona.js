@@ -17,7 +17,7 @@ registrarVecino = function (form) {
             {
                 success: function (result) {
                     if (result > 0) {
-                        alert(result);
+                        //alert(result);
                         Ext.MessageBox.show({
                             title: 'Exitoso!',
                             msg: 'Registro Grabado Exitosamente..!',

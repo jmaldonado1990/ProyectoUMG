@@ -212,6 +212,33 @@ Partial Public Class MantenimientoContador
     Protected WithEvents txtLimpiarNumero As Global.Ext.Net.ClearButton
 
     '''<summary>
+    '''Control Column5.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Column5 As Global.Ext.Net.Column
+
+    '''<summary>
+    '''Control txtFiltroDireccion.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtFiltroDireccion As Global.Ext.Net.TextField
+
+    '''<summary>
+    '''Control txtLimpiarDireccion.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtLimpiarDireccion As Global.Ext.Net.ClearButton
+
+    '''<summary>
     '''Control Column4.
     '''</summary>
     '''<remarks>

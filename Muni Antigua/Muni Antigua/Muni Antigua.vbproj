@@ -251,10 +251,12 @@
     <Content Include="packages.config" />
     <Content Include="App_Readme\Ext.NET\Sample.Web.config" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Paginas\Administracion\AsignacionContador.aspx" />
     <Content Include="Paginas\Administracion\EdicionContador.aspx" />
     <Content Include="Paginas\Administracion\EdicionPersona.aspx" />
     <Content Include="Paginas\Administracion\MantenimientoContador.aspx" />
     <Content Include="Paginas\Administracion\MantenimientoPersona.aspx" />
+    <Content Include="Paginas\Administracion\Scripts\AsignacionContador.js" />
     <Content Include="Paginas\Administracion\Scripts\EdicionContador.js" />
     <Content Include="Paginas\Administracion\Scripts\EdicionPersona.js" />
     <Content Include="Paginas\Administracion\Scripts\MantenimientoContador.js" />
@@ -341,6 +343,7 @@
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Clases\clsComunes.vb" />
+    <Compile Include="Clases\ControladorAsignacionContador.vb" />
     <Compile Include="Clases\ControladorMantenimientoContador.vb" />
     <Compile Include="Clases\ControladorMantenimientoPersona.vb" />
     <Compile Include="Contact.aspx.designer.vb">
@@ -378,6 +381,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Paginas\Administracion\AsignacionContador.aspx.designer.vb">
+      <DependentUpon>AsignacionContador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Administracion\AsignacionContador.aspx.vb">
+      <DependentUpon>AsignacionContador.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Paginas\Administracion\EdicionContador.aspx.designer.vb">
       <DependentUpon>EdicionContador.aspx</DependentUpon>

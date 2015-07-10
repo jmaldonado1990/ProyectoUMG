@@ -1,35 +1,49 @@
 ﻿var ejecutarConsulta = function () {
-    App.direct.llenarGridVecinos();
+    App.direct.llenarGridContadores();
 },
 
-cerrarVentanaVecinos = function () {
+cerrarVentanaContador = function () {
     ejecutarConsulta();
-    App.WindowEdicionVecino.close();
+    App.WindowEdicionContador.close();
+},
+
+cerrarVentanaAsignacion = function () {
+    ejecutarConsulta();
+    App.WindowEdicionAsignacion.close();
 },
 
 AgregarNuevoContador = function () {
     App.direct.crearVentanaEdicionContador('nuevo', 0);
 },
 
+ejecutarComandoContador = function (command, record) {
+    switch (command) {
+        case 'Asignar':
+            App.direct.crearVentanaAsignacionContador('asignar', record);
+            break;
+    }
+},
+
 Filtrar = function (columna) {
-    var store = App.gridListadoVecinos.getStore();
+    var store = App.gridListadoContadores.getStore();
     store.filterBy(ObtenerFiltro(columna));
 
 },
+
 ObtenerFiltro = function (columna) {
     var f = [];
     f.push({
         filter: function (record) {
-            if (columna == 'dpi')
-                return filtrarCadena(App.txtFiltroDPI.value || "", columna, record);
-            if (columna == 'nombre')
-                return filtrarCadena(App.txtFiltroNombre.value || "", columna, record);
-            if (columna == 'apellido')
-                return filtrarCadena(App.txtFiltroApellido.value || "", columna, record);
-            if (columna == 'telefono')
-                return filtrarCadena(App.txtFiltroTelefono.value || "", columna, record);
-            if (columna == 'email')
-                return filtrarCadena(App.txtFiltroCorreo.value || "", columna, record);
+            if (columna == 'marca')
+                return filtrarCadena(App.txtFiltroMarca.value || "", columna, record);
+            if (columna == 'modelo')
+                return filtrarCadena(App.txtFiltroModelo.value || "", columna, record);
+            if (columna == 'numero')
+                return filtrarCadena(App.txtFiltroNumero.value || "", columna, record);
+            if (columna == 'direccion')
+                return filtrarCadena(App.txtFiltroDireccion.value || "", columna, record);
+            if (columna == 'estado')
+                return filtrarCadena(App.txtFiltroEstado.value || "", columna, record);
 
         }
 

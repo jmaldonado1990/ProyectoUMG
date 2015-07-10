@@ -56,7 +56,6 @@
                                         <ext:ModelField Name="numero" />
                                         <ext:ModelField Name="direccion" />
                                         <ext:ModelField Name="estado" />
-                                        <ext:ModelField Name="permite_eliminar" Type="Boolean" />
                                     </Fields>
                                 </ext:Model>
                             </Model>
@@ -102,6 +101,18 @@
                                     </ext:TextField>
                                 </Items>
                             </ext:Column>
+                             <ext:Column ID="Column5" runat="server" Text="Ubicación" DataIndex="direccion" Flex="1" >
+                                <Items>
+                                     <ext:TextField ID="txtFiltroDireccion" runat="server">
+                                        <Listeners>
+                                            <Change Handler="Filtrar('direccion');" Buffer="250" />
+                                        </Listeners>
+                                        <Plugins>
+                                            <ext:ClearButton ID="txtLimpiarDireccion" runat="server" />
+                                        </Plugins>
+                                    </ext:TextField>
+                                </Items>
+                            </ext:Column>
                             <ext:Column ID="Column4" runat="server" Text="Estado" DataIndex="estado" Flex="1" >
                                 <Items>
                                      <ext:TextField ID="txtFiltroEstado" runat="server">
@@ -122,7 +133,7 @@
                                 </Commands>
                                 <%-- <PrepareToolbar Fn="prepareToolbarBancos" />--%>
                                 <Listeners>
-                                    <%--<Command Handler="ejecutarComandoVecinos(command, record.data.id_persona);" />--%>
+                                    <Command Handler="ejecutarComandoContador(command, record.data.id_contador);" />
                                 </Listeners>
                             </ext:CommandColumn>
 

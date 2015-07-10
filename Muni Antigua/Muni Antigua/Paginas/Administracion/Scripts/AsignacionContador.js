@@ -1,16 +1,22 @@
 ﻿var cerrarVentana = function (btn) {
-    window.parent.cerrarVentanaContador();
-},
+    window.parent.cerrarVentanaAsignacion();
+};
 
 
-registrarContador = function (form) {
+ejecutarConsulta = function () {
+    var dpi = App.txtDPI.value;
+    App.direct.obtenerRegistroPersona(dpi);
+};
+
+registrarAsignacion = function (form) {
+    alert(1);
     if (form.isValid()) {
-        var marca = App.txtMarca.value;
-        var modelo = App.txtModelo.value;
-        var numero = App.txtNumero.value;
-        var ubicacion = App.txtUbicacion.value;
-        var estado = App.cboEstadoContador.value;
-        App.direct.grabarContador(marca, modelo, numero, ubicacion, estado,
+        var accion = 'U';
+        var id_contador = App.lblIdContador.value;
+        var direccion = App.txtDireccion.value;
+        var id_persona = App.lblIdPersona.value;
+        alert(id_contador);
+        App.direct.grabarAsignacionContador(accion, id_contador, direccion, id_persona,
       {
           success: function (result) {
               if (result > 0) {
