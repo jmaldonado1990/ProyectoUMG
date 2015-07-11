@@ -36,6 +36,8 @@ Public Class ControladorMantenimientoContador
         End Try
     End Function
 
+
+
     Public Function llenarComboEstadoContador() As DataTable
         Try
             cnn.Open()
@@ -64,7 +66,6 @@ Public Class ControladorMantenimientoContador
                                 ByVal marca As String,
                                         ByVal modelo As String,
                                         ByVal numero As String,
-                                        ByVal direccion As String,
                                         ByVal estado As Int32) As Integer
         Try
             cnn.Open()
@@ -77,7 +78,6 @@ Public Class ControladorMantenimientoContador
             cmd.Parameters.AddWithValue("@p_marca", marca)
             cmd.Parameters.AddWithValue("@p_modelo", modelo)
             cmd.Parameters.AddWithValue("@p_numero", numero)
-            cmd.Parameters.AddWithValue("@p_direccion", direccion)
             cmd.Parameters.AddWithValue("@p_id_usuario", clsComunes.llave.id_usuario)
             cmd.Parameters.AddWithValue("@p_id_estado_contador", estado)
 

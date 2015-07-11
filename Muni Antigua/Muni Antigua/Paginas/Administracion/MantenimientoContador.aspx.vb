@@ -42,7 +42,7 @@ Public Class MantenimientoContador
         queryString &= ("accion=" & accion)
         queryString &= ("&idContador=" & id_contador)
         Dim win = New Window With {.ID = "WindowEdicionContador", _
-                                    .Width = Unit.Pixel(550), _
+                                    .Width = Unit.Pixel(450), _
                                     .Height = Unit.Pixel(390), _
                                     .Title = titulo, _
                                     .Modal = True, _

@@ -104,22 +104,22 @@ Partial Public Class AsignacionContador
     Protected WithEvents txtDireccion As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control lblIdPersona.
+    '''Control txtIdPersona.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblIdPersona As Global.Ext.Net.TextField
+    Protected WithEvents txtIdPersona As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control lblIdContador.
+    '''Control txtIdContador.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblIdContador As Global.Ext.Net.TextField
+    Protected WithEvents txtIdContador As Global.Ext.Net.TextField
 
     '''<summary>
     '''Control btnGuardar.

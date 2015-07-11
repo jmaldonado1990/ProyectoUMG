@@ -37,7 +37,6 @@ Public Class EdicionContador
     Public Function grabarContador(ByVal marca As String,
                                         ByVal modelo As String,
                                         ByVal numero As String,
-                                        ByVal direccion As String,
                                         ByVal estado As Int32) As Integer
 
         Try
@@ -46,7 +45,7 @@ Public Class EdicionContador
             Dim accion As String = ""
             If _accion = "nuevo" Then
                 accion = "I"
-                filas_afectadas = accesoDatos.registrarContador(accion, marca, modelo, numero, direccion, estado)
+                filas_afectadas = accesoDatos.registrarContador(accion, marca, modelo, numero, estado)
             End If
             Return filas_afectadas
         Catch ex As Exception

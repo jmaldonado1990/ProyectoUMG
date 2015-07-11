@@ -145,11 +145,11 @@
                               <ext:TextField ID="txtDireccion" runat="server" X="30" Y="170" FieldLabel="Ubicación:" LabelWidth="85"
                                 Width="300" LabelAlign="Right" AllowBlank="false" Disabled="false" />
 
-                             <ext:TextField ID="lblIdPersona" runat="server" X="30" Y="200" FieldLabel="Id_Persona" LabelWidth="85"
-                                Width="300" LabelAlign="Right" AllowBlank="true" Visible="true" />
+                             <ext:TextField ID="txtIdPersona" runat="server" X="30" Y="400" FieldLabel="Id_Persona" LabelWidth="85"
+                                Width="300" LabelAlign="Right" AllowBlank="false" Hidden="true" />
 
-                            <ext:TextField ID="lblIdContador" runat="server" X="30" Y="230" FieldLabel="Id_Contador" LabelWidth="85"
-                                Width="300" LabelAlign="Right" AllowBlank="true" Visible="true" />
+                            <ext:TextField ID="txtIdContador" runat="server" X="30" Y="500" FieldLabel="Id_Contador" LabelWidth="85"
+                                Width="300" LabelAlign="Right" AllowBlank="true" Hidden="true" />
 
 
 

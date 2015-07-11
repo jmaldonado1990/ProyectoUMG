@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class EdicionContador
+Partial Public Class EdicionLectura
 
     '''<summary>
     '''Control form1.
@@ -32,67 +32,22 @@ Partial Public Class EdicionContador
     Protected WithEvents ResourceManager1 As Global.Ext.Net.ResourceManager
 
     '''<summary>
-    '''Control Panel1.
+    '''Control ViewPort.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Panel1 As Global.Ext.Net.Panel
+    Protected WithEvents ViewPort As Global.Ext.Net.Viewport
 
     '''<summary>
-    '''Control FormMantenimientoContador.
+    '''Control FormMantenimientoLectura.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents FormMantenimientoContador As Global.Ext.Net.FormPanel
-
-    '''<summary>
-    '''Control FieldSet1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents FieldSet1 As Global.Ext.Net.FieldSet
-
-    '''<summary>
-    '''Control FieldContainer1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents FieldContainer1 As Global.Ext.Net.FieldContainer
-
-    '''<summary>
-    '''Control ContainerDatos.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents ContainerDatos As Global.Ext.Net.Container
-
-    '''<summary>
-    '''Control txtMarca.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtMarca As Global.Ext.Net.TextField
-
-    '''<summary>
-    '''Control txtModelo.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtModelo As Global.Ext.Net.TextField
+    Protected WithEvents FormMantenimientoLectura As Global.Ext.Net.FormPanel
 
     '''<summary>
     '''Control txtNumero.
@@ -104,49 +59,76 @@ Partial Public Class EdicionContador
     Protected WithEvents txtNumero As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control cboEstadoContador.
+    '''Control btnEjecutarConsulta.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents cboEstadoContador As Global.Ext.Net.ComboBox
+    Protected WithEvents btnEjecutarConsulta As Global.Ext.Net.Button
 
     '''<summary>
-    '''Control StoreEstadoContador.
+    '''Control lblNombres.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents StoreEstadoContador As Global.Ext.Net.Store
+    Protected WithEvents lblNombres As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control ModeloEstadoContador.
+    '''Control lblApellidos.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ModeloEstadoContador As Global.Ext.Net.Model
+    Protected WithEvents lblApellidos As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control lblCerrarW.
+    '''Control dtFechaInicio.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblCerrarW As Global.Ext.Net.Label
+    Protected WithEvents dtFechaInicio As Global.Ext.Net.DateField
 
     '''<summary>
-    '''Control StatusBar1.
+    '''Control dtFechaFin.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents StatusBar1 As Global.Ext.Net.StatusBar
+    Protected WithEvents dtFechaFin As Global.Ext.Net.DateField
+
+    '''<summary>
+    '''Control txtLecturaActual.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtLecturaActual As Global.Ext.Net.TextField
+
+    '''<summary>
+    '''Control txtLecturaAnterior.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtLecturaAnterior As Global.Ext.Net.TextField
+
+    '''<summary>
+    '''Control txtIdContador.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtIdContador As Global.Ext.Net.TextField
 
     '''<summary>
     '''Control btnGuardar.

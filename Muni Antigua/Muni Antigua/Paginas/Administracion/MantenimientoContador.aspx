@@ -56,6 +56,7 @@
                                         <ext:ModelField Name="numero" />
                                         <ext:ModelField Name="direccion" />
                                         <ext:ModelField Name="estado" />
+                                        <ext:ModelField Name="permite_acreditar" Type="Int"/>
                                     </Fields>
                                 </ext:Model>
                             </Model>
@@ -131,7 +132,7 @@
                                     <ext:GridCommand Icon="PageWhiteEdit" CommandName="Editar" Text="" ToolTip-Text="Editar" />
                                     <ext:GridCommand Icon="ApplicationFormAdd" CommandName="Asignar" Text="" ToolTip-Text="Asignar" />
                                 </Commands>
-                                <%-- <PrepareToolbar Fn="prepareToolbarBancos" />--%>
+                                 <PrepareToolbar Fn="prepareToolbarContadores" />
                                 <Listeners>
                                     <Command Handler="ejecutarComandoContador(command, record.data.id_contador);" />
                                 </Listeners>

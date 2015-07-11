@@ -253,14 +253,18 @@
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Paginas\Administracion\AsignacionContador.aspx" />
     <Content Include="Paginas\Administracion\EdicionContador.aspx" />
+    <Content Include="Paginas\Administracion\EdicionLectura.aspx" />
     <Content Include="Paginas\Administracion\EdicionPersona.aspx" />
     <Content Include="Paginas\Administracion\MantenimientoContador.aspx" />
     <Content Include="Paginas\Administracion\MantenimientoPersona.aspx" />
+    <Content Include="Paginas\Administracion\MantenimientoLectura.aspx" />
     <Content Include="Paginas\Administracion\Scripts\AsignacionContador.js" />
     <Content Include="Paginas\Administracion\Scripts\EdicionContador.js" />
+    <Content Include="Paginas\Administracion\Scripts\EdicionLectura.js" />
     <Content Include="Paginas\Administracion\Scripts\EdicionPersona.js" />
     <Content Include="Paginas\Administracion\Scripts\MantenimientoContador.js" />
     <Content Include="Paginas\Administracion\Scripts\MantenimientoPersona.js" />
+    <Content Include="Paginas\Administracion\Scripts\MantenimientoLectura.js" />
     <Content Include="Paginas\PaginaPrincipal\PaginaPrincipal.aspx" />
     <Content Include="PanelPrincipal.aspx" />
     <Content Include="Scripts\jquery-1.7.1.js" />
@@ -396,6 +400,13 @@
       <DependentUpon>EdicionContador.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Paginas\Administracion\EdicionLectura.aspx.designer.vb">
+      <DependentUpon>EdicionLectura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Administracion\EdicionLectura.aspx.vb">
+      <DependentUpon>EdicionLectura.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Paginas\Administracion\EdicionPersona.aspx.designer.vb">
       <DependentUpon>EdicionPersona.aspx</DependentUpon>
     </Compile>
@@ -415,6 +426,13 @@
     </Compile>
     <Compile Include="Paginas\Administracion\MantenimientoPersona.aspx.vb">
       <DependentUpon>MantenimientoPersona.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Administracion\MantenimientoLectura.aspx.designer.vb">
+      <DependentUpon>MantenimientoLectura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Administracion\MantenimientoLectura.aspx.vb">
+      <DependentUpon>MantenimientoLectura.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Paginas\PaginaPrincipal\PaginaPrincipal.aspx.designer.vb">

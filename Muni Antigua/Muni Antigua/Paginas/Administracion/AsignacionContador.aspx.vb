@@ -6,6 +6,8 @@ Public Class AsignacionContador
 #Region "Variables"
     Private accion As String = ""
     Private id_contador As Int32 = 0
+    Public id_persona As Int32
+    Public id_conta As Int32
 #End Region
 
 
@@ -26,7 +28,7 @@ Public Class AsignacionContador
                 Dim fila = tabla.Rows(0)
                 lblNombres.Value = fila("nombre")
                 lblApellidos.Value = fila("apellido")
-                lblIdPersona.Value = fila("id_persona")
+                txtIdPersona.Value = fila("id_persona")
                 Return True
             End If
         Catch ex As Exception
@@ -36,10 +38,10 @@ Public Class AsignacionContador
     End Function
 
     <DirectMethod>
-    Public Function grabarAsignacionContador(ByVal accion As Char,
-                                            ByVal id_contador As Int32,
+    Public Function grabarAsignacionContador(ByVal accion As String,
+                                             ByVal id_contador As Int32,
                                              ByVal direccion As String,
-                                        ByVal id_persona As Int32) As Integer
+                                             ByVal id_persona As Int32) As Integer
 
         Try
             Dim accesoDatos As New ControladorAsignacionContador
@@ -61,7 +63,7 @@ Public Class AsignacionContador
                 If tabla.Rows.Count <> 0 Then
                     Dim fila = tabla.Rows(0)
                     lblNumero.Value = fila("numero")
-                    lblIdContador.Value = fila("id_contador")
+                    txtIdContador.Value = fila("id_contador")
 
                 End If
             End If

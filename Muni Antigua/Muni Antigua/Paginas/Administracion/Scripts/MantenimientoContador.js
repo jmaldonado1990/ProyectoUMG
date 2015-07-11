@@ -69,6 +69,20 @@ filtrarCadena = function (value, dataIndex, record) {
     }
 
     return val.toLowerCase().indexOf(value.toLowerCase()) > -1;
+},
+
+//prepareToolbarContadores = function (grid, toolbar, rowIndex, record) {
+//    var button = toolbar.items.get(1);
+//    if (record.data.permite_acreditar > 0) {
+//        button.hide();
+//    }
+//};
+
+prepareToolbarContadores = function (grid, toolbar, rowIndex, record) {
+    var button = toolbar.items.get(1);
+    if (record.data.estado == "Asignado") {
+        button.hide();
+    }
 };
 
 

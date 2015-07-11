@@ -58,19 +58,20 @@ Public Class ControladorAsignacionContador
         End Try
     End Function
 
-    Public Function registrarAsignacionContador(ByVal accion As Char,
+    Public Function registrarAsignacionContador(ByVal accion As String,
                                ByVal id_contador As Int32,
                                ByVal direccion As String,
                                        ByVal id_persona As String) As Integer
         Try
             cnn.Open()
-            cmd = New SqlCommand("[pagua].[prActualizarTablaContador]")
+            cmd = New SqlCommand("[pagua].[prActualizarAsignacion]")
             cmd.CommandType = CommandType.StoredProcedure
 
             cmd.Connection = cnn
 
             cmd.Parameters.AddWithValue("@p_accion", accion)
             cmd.Parameters.AddWithValue("@p_id_contador", id_contador)
+            cmd.Parameters.AddWithValue("@p_direccion", direccion)
             cmd.Parameters.AddWithValue("@p_id_persona", id_persona)
             cmd.Parameters.AddWithValue("@p_id_usuario", clsComunes.llave.id_usuario)
 

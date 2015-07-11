@@ -203,6 +203,15 @@ Partial Public Class PanelPrincipal
     Protected WithEvents MenuItem4 As Global.Ext.Net.MenuItem
 
     '''<summary>
+    '''Control MenuItem5.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents MenuItem5 As Global.Ext.Net.MenuItem
+
+    '''<summary>
     '''Control menuPanel.
     '''</summary>
     '''<remarks>

@@ -1,21 +1,19 @@
 ﻿var cerrarVentana = function (btn) {
     window.parent.cerrarVentanaAsignacion();
-};
+},
 
 
 ejecutarConsulta = function () {
     var dpi = App.txtDPI.value;
     App.direct.obtenerRegistroPersona(dpi);
-};
+},
 
 registrarAsignacion = function (form) {
-    alert(1);
     if (form.isValid()) {
         var accion = 'U';
-        var id_contador = App.lblIdContador.value;
+        var id_contador = App.txtIdContador.value;
         var direccion = App.txtDireccion.value;
-        var id_persona = App.lblIdPersona.value;
-        alert(id_contador);
+        var id_persona = App.txtIdPersona.value;
         App.direct.grabarAsignacionContador(accion, id_contador, direccion, id_persona,
       {
           success: function (result) {

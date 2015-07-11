@@ -8,9 +8,8 @@ registrarContador = function (form) {
         var marca = App.txtMarca.value;
         var modelo = App.txtModelo.value;
         var numero = App.txtNumero.value;
-        var ubicacion = App.txtUbicacion.value;
         var estado = App.cboEstadoContador.value;
-        App.direct.grabarContador(marca, modelo, numero, ubicacion, estado,
+        App.direct.grabarContador(marca, modelo, numero, estado,
       {
           success: function (result) {
               if (result > 0) {

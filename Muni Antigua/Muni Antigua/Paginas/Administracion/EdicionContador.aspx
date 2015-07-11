@@ -68,18 +68,18 @@
                                                     EmptyText="Número" TabIndex="3"
                                                     AllowBlank="false" />
 
-                                                <ext:TextField ID="txtUbicacion" runat="server"
+<%--                                                <ext:TextField ID="txtUbicacion" runat="server"
                                                     Name="Ubicacion"
                                                     FieldLabel="Ubicación"
                                                     Flex="1"
                                                     EmptyText="Ubicación" TabIndex="4"
-                                                    AllowBlank="true" />
+                                                    AllowBlank="true" />--%>
 
 
                                                  <ext:ComboBox ID="cboEstadoContador" runat="server" 
                                                      FieldLabel="Estado" EmptyText="Seleccione Estado"
                                                     ForceSelection="true" ValueField="id_estado_contador" 
-                                                     DisplayField="estado_contador" Editable="false" TabIndex="5" 
+                                                     DisplayField="estado_contador" Editable="false" TabIndex="4" 
                                                      AllowBlank="false">
                                                     <Store>
                                                         <ext:Store runat="server" ID="StoreEstadoContador">
