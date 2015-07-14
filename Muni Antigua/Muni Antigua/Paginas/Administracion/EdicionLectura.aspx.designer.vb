@@ -50,58 +50,49 @@ Partial Public Class EdicionLectura
     Protected WithEvents FormMantenimientoLectura As Global.Ext.Net.FormPanel
 
     '''<summary>
-    '''Control txtNumero.
+    '''Control cboContador.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtNumero As Global.Ext.Net.TextField
+    Protected WithEvents cboContador As Global.Ext.Net.ComboBox
 
     '''<summary>
-    '''Control btnEjecutarConsulta.
+    '''Control StoreContador.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnEjecutarConsulta As Global.Ext.Net.Button
+    Protected WithEvents StoreContador As Global.Ext.Net.Store
 
     '''<summary>
-    '''Control lblNombres.
+    '''Control ModeloContador.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblNombres As Global.Ext.Net.TextField
+    Protected WithEvents ModeloContador As Global.Ext.Net.Model
 
     '''<summary>
-    '''Control lblApellidos.
+    '''Control txtFechaInicio.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblApellidos As Global.Ext.Net.TextField
+    Protected WithEvents txtFechaInicio As Global.Ext.Net.DateField
 
     '''<summary>
-    '''Control dtFechaInicio.
+    '''Control txtFechaFin.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents dtFechaInicio As Global.Ext.Net.DateField
-
-    '''<summary>
-    '''Control dtFechaFin.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents dtFechaFin As Global.Ext.Net.DateField
+    Protected WithEvents txtFechaFin As Global.Ext.Net.DateField
 
     '''<summary>
     '''Control txtLecturaActual.
@@ -120,15 +111,6 @@ Partial Public Class EdicionLectura
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtLecturaAnterior As Global.Ext.Net.TextField
-
-    '''<summary>
-    '''Control txtIdContador.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtIdContador As Global.Ext.Net.TextField
 
     '''<summary>
     '''Control btnGuardar.

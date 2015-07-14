@@ -25,95 +25,7 @@
 </head>
 <body>
     <script src="Scripts/AsignacionContador.js" type="text/javascript"></script>
-    <%-- <form id="form1" runat="server">
-        <ext:ResourceManager ID="ResourceManager1" runat="server" InitScriptMode="Linked" DirectEventUrl="AsignacionContador.aspx" />
-            <ext:Panel ID="Panel1"
-                runat="server"
-                Layout="FormLayout">
-
-                <items>
-                <ext:FormPanel ID="FormMantenimientoAsignacion" runat="server" Title="Asignación de Contadores" Frame="true" BodyPadding="8">
-                    <Defaults>
-                        <ext:Parameter Name="MsgTarget" Value="side" />
-                    </Defaults>
-                    <FieldDefaults LabelAlign="Right" LabelWidth="90" MsgTarget="Qtip" />
-                    <Items>
-                        <ext:FieldSet ID="FieldSet1" runat="server" Title="Datos Generales" Layout="AnchorLayout" DefaultAnchor="100%">
-                            <Items>
-                                <ext:FieldContainer ID="FieldContainer1" runat="server" Layout="ColumnLayout" AnchorVertical="100%">
-                                    <Items>
-                                        <ext:Container ID="ContainerDatos" runat="server" Layout="FormLayout" ColumnWidth=".85" Padding="5">
-
-                                            <Items>
-
-
-                                                <ext:TextField ID="lblNumero" runat="server"
-                                                    Name="Numero" X="15" Y="20"
-                                                    FieldLabel="Número Contador" LabelWidth="85"
-                                                    Flex="1" Width="360"
-                                                    TabIndex="1" Disabled="true" />
-
-
-                                                <ext:TextField ID="txtDPI" runat="server"
-                                                    Name="DPI" X="25" Y="40"
-                                                    FieldLabel="DPI" LabelWidth="85"
-                                                    Flex="1" Width="360"
-                                                    EmptyText="DPI" TabIndex="2"
-                                                    AllowBlank="false" />
-                                                
-
-                                               
-
-
-                                                <ext:Label ID="lblNombres" runat="server"
-                                                    Name="Nombres"
-                                                    FieldLabel="Nombres"
-                                                    Flex="1"
-                                                    TabIndex="3" />
-
-                                                <ext:Label ID="lblApellidos" runat="server"
-                                                    Name="Apellidos"
-                                                    FieldLabel="Apellidos"
-                                                    Flex="1"
-                                                    TabIndex="4" />
-
-
-                                            </Items>
-                                        </ext:Container>
-                                    </Items>
-                                </ext:FieldContainer>
-                            </Items>
-                        </ext:FieldSet>
-                        <ext:Label runat="server" ID="lblCerrarW" />
-                    </Items>
-                    <BottomBar>
-                        <ext:StatusBar ID="StatusBar1" runat="server" />
-                    </BottomBar>
-                    <Listeners>
-                        <ValidityChange Handler="this.dockedItems.get(1).setStatus({
-                                                     text : valid ? 'Formulario Completado' : 'Formulario No Válido', 
-                                                     iconCls: valid ? 'icon-accept' : 'icon-exclamation'
-                                                 });
-                                                 #{btnGuardar}.setDisabled(!valid);" />
-                    </Listeners>
-                </ext:FormPanel>
-            </items>
-                <buttons>
-                <ext:Button ID="btnGuardar" runat="server" Text="Guardar" Disabled="true" FormBind="true" Icon="Disk" Width="110">
-                    <Listeners>
-                        <Click Handler="registrarAsignacion(#{FormMantenimientoAsignacion});" />
-                    </Listeners>
-                </ext:Button>
-                <ext:Button ID="btnCancelar" runat="server" Text="Cancelar" Icon="Cancel" Width="110">
-                    <Listeners>
-                        <Click Handler="cerrarVentana();" />
-                    </Listeners>
-                </ext:Button>
-            </buttons>
-                 
-            </ext:Panel>
-     
-    </form>--%>
+    
     <form id="form1" runat="server">
         <div>
             <ext:ResourceManager ID="ResourceManager1" runat="server" InitScriptMode="Linked" DirectEventUrl="AsignacionContador.aspx" />
@@ -128,25 +40,43 @@
 
                         <Items>
                             <ext:TextField ID="lblNumero" runat="server" X="30" Y="50" FieldLabel="Número:" LabelWidth="85"
-                                Width="300" LabelAlign="Right" AllowBlank="true" Disabled="true" />
+                                Width="400" LabelAlign="Right" AllowBlank="true" Disabled="true" TabIndex="1" Flex="1" />
 
-                            <ext:TextField ID="txtDPI" runat="server" X="30" Y="80" FieldLabel="DPI" LabelWidth="85"
-                                Width="300" LabelAlign="Right" AllowBlank="false" Name="DPI" EmptyText="Consultar persona" />
+                             <ext:ComboBox ID="cboVecino" runat="server" FieldLabel="Vecino:" LabelWidth="85" EmptyText="Seleccione Vecino" Width="400"
+                            ForceSelection="true" ValueField="id_persona" DisplayField="vecino" TriggerAction="All" LabelAlign="Right"
+                            TabIndex="2" AllowBlank="false" X="30" Y="80" Flex="1" QueryMode="Local">
+                            <Store>
+                                <ext:Store runat="server" ID="StoreVecinos">
+                                    <Model>
+                                        <ext:Model runat="server" ID="ModeloPersona" IDProperty="id_persona">
+                                            <Fields>
+                                                <ext:ModelField Name="id_persona" Type="Int" />
+                                                <ext:ModelField Name="vecino" Type="String" />
+                                            </Fields>
+                                        </ext:Model>
+                                    </Model>
+                                </ext:Store>
+                            </Store>
 
-                            <ext:Button ID="btnEjecutarConsulta" runat="server" X="310" Y="-30" Width="80" Text=""
-                            Icon="Reload" OnClientClick="ejecutarConsulta();" />   
+                        </ext:ComboBox>
 
-                              <ext:TextField ID="lblNombres" runat="server" X="30" Y="-30" FieldLabel="Nombres:" LabelWidth="85"
+                           <%-- <ext:TextField ID="txtNombre" runat="server" X="30" Y="80" FieldLabel="Vecino" LabelWidth="85"
+                                Width="300" LabelAlign="Right" AllowBlank="false" Name="DPI" EmptyText="Consultar persona" />--%>
+
+                            <%--<ext:Button ID="btnEjecutarConsulta" runat="server" X="310" Y="-30" Width="80" Text=""
+                            Icon="Reload" OnClientClick="ejecutarConsulta();" />   --%>
+
+                            <%--  <ext:TextField ID="lblNombres" runat="server" X="30" Y="-30" FieldLabel="Nombres:" LabelWidth="85"
                                 Width="300" LabelAlign="Right" AllowBlank="true" Disabled="true"/>
 
                             <ext:TextField ID="lblApellidos" runat="server" X="30" Y="140" FieldLabel="Apellidos:" LabelWidth="85"
-                                Width="300" LabelAlign="Right" AllowBlank="true" Disabled="true" />
+                                Width="300" LabelAlign="Right" AllowBlank="true" Disabled="true" />--%>
 
                               <ext:TextField ID="txtDireccion" runat="server" X="30" Y="170" FieldLabel="Ubicación:" LabelWidth="85"
-                                Width="300" LabelAlign="Right" AllowBlank="false" Disabled="false" />
+                                Width="400" LabelAlign="Right" AllowBlank="false" Disabled="false" TabIndex="3" />
 
-                             <ext:TextField ID="txtIdPersona" runat="server" X="30" Y="400" FieldLabel="Id_Persona" LabelWidth="85"
-                                Width="300" LabelAlign="Right" AllowBlank="false" Hidden="true" />
+<%--                             <ext:TextField ID="txtIdPersona" runat="server" X="30" Y="400" FieldLabel="Id_Persona" LabelWidth="85"
+                                Width="300" LabelAlign="Right" AllowBlank="false" Hidden="true" />--%>
 
                             <ext:TextField ID="txtIdContador" runat="server" X="30" Y="500" FieldLabel="Id_Contador" LabelWidth="85"
                                 Width="300" LabelAlign="Right" AllowBlank="true" Hidden="true" />

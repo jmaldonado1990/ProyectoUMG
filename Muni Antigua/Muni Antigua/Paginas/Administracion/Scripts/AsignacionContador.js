@@ -13,7 +13,7 @@ registrarAsignacion = function (form) {
         var accion = 'U';
         var id_contador = App.txtIdContador.value;
         var direccion = App.txtDireccion.value;
-        var id_persona = App.txtIdPersona.value;
+        var id_persona = App.cboVecino.value;
         App.direct.grabarAsignacionContador(accion, id_contador, direccion, id_persona,
       {
           success: function (result) {

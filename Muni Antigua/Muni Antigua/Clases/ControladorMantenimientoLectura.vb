@@ -1,43 +1,17 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Configuration
-Public Class ControladorAsignacionContador
+Public Class ControladorMantenimientoLectura
     Dim cmd As New SqlCommand
 
     Protected configuracion As ConnectionStringSettings = ConfigurationManager.ConnectionStrings("cnn")
     Dim cnn As New SqlConnection(configuracion.ConnectionString)
 
+#Region "Metodos Publicos"
 
-#Region "Metodos Públicos"
-    Public Function obtenerRegistroContador(ByVal id_contador As Int32) As DataTable
+    Public Function obtenerListadoLectura() As DataTable
         Try
             cnn.Open()
-            cmd = New SqlCommand("[pagua].[prObtenerRegistroContador]")
-            cmd.CommandType = CommandType.StoredProcedure
-
-            cmd.Connection = cnn
-            cmd.Parameters.AddWithValue("@p_id_contador", id_contador)
-
-            If cmd.ExecuteNonQuery Then
-                Dim dt As New DataTable
-                Dim da As New SqlDataAdapter(cmd)
-                da.Fill(dt)
-                Return dt
-            Else
-                Return Nothing
-            End If
-        Catch ex As Exception
-            Throw ex
-            Return Nothing
-        Finally
-            cnn.Close()
-        End Try
-    End Function
-
-
-    Public Function obtenerVecinos() As DataTable
-        Try
-            cnn.Open()
-            cmd = New SqlCommand("[comun].[prLlenarComboPersonas]")
+            cmd = New SqlCommand("[pagua].[prObternerListadoLecturas]")
             cmd.CommandType = CommandType.StoredProcedure
 
             cmd.Connection = cnn
@@ -59,23 +33,71 @@ Public Class ControladorAsignacionContador
     End Function
 
 
-    Public Function registrarAsignacionContador(ByVal accion As String,
-                               ByVal id_contador As Int32,
-                               ByVal direccion As String,
-                                       ByVal id_persona As String) As Integer
+    Public Function obtenerContador() As DataTable
         Try
             cnn.Open()
-            cmd = New SqlCommand("[pagua].[prActualizarAsignacion]")
+            cmd = New SqlCommand("[pagua].[prLlenarComboContadores]")
             cmd.CommandType = CommandType.StoredProcedure
 
             cmd.Connection = cnn
 
-            cmd.Parameters.AddWithValue("@p_accion", accion)
+            If cmd.ExecuteNonQuery Then
+                Dim dt As New DataTable
+                Dim da As New SqlDataAdapter(cmd)
+                da.Fill(dt)
+                Return dt
+            Else
+                Return Nothing
+            End If
+        Catch ex As Exception
+            Throw ex
+            Return Nothing
+        Finally
+            cnn.Close()
+        End Try
+    End Function
+
+    Public Function obtenerDatosPersona(ByVal id_contador As Int16) As DataTable
+        Try
+            cnn.Open()
+            cmd = New SqlCommand("[pagua].[prConsultarContador]")
+            cmd.CommandType = CommandType.StoredProcedure
+
+            cmd.Connection = cnn
             cmd.Parameters.AddWithValue("@p_id_contador", id_contador)
-            cmd.Parameters.AddWithValue("@p_direccion", direccion)
-            cmd.Parameters.AddWithValue("@p_id_persona", id_persona)
+
+            If cmd.ExecuteNonQuery Then
+                Dim dt As New DataTable
+                Dim da As New SqlDataAdapter(cmd)
+                da.Fill(dt)
+                Return dt
+            Else
+                Return Nothing
+            End If
+        Catch ex As Exception
+            Throw ex
+            Return Nothing
+        Finally
+            cnn.Close()
+        End Try
+    End Function
+
+    Public Function registrarLectura(ByVal fecha_inicio As Date,
+                                       ByVal fecha_fin As Date,
+                                       ByVal lectura_actual As Double,
+                                       ByVal id_contador As Int32) As Integer
+        Try
+            cnn.Open()
+            cmd = New SqlCommand("[pagua].[prInsertarTablaLectura]")
+            cmd.CommandType = CommandType.StoredProcedure
+
+            cmd.Connection = cnn
+
+            cmd.Parameters.AddWithValue("@p_fecha_inicio", fecha_inicio)
+            cmd.Parameters.AddWithValue("@p_fecha_fin", fecha_fin)
+            cmd.Parameters.AddWithValue("@p_lectura_actual", lectura_actual)
             cmd.Parameters.AddWithValue("@p_id_usuario", clsComunes.llave.id_usuario)
-
+            cmd.Parameters.AddWithValue("@p_id_contador", id_contador)
             If cmd.ExecuteNonQuery Then
                 Return 1
             Else
@@ -90,7 +112,7 @@ Public Class ControladorAsignacionContador
             cnn.Close()
         End Try
     End Function
-#End Region
 
+#End Region
 
 End Class

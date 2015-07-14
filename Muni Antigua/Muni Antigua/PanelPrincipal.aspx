@@ -124,6 +124,11 @@
                             Icon="ApplicationForm" AutoScroll="false" BodyPadding="5" Border="false">
                             <Menu ID="Menu2" runat="server">
                                 <Items>
+                                      <ext:MenuItem ID="MenuItem6" runat="server" Text="Registrar Pagos Agua" Icon="ApplicationFormAdd">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id6', 'Paginas/Servicios/PagosAgua.aspx','Pagos de Agua',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
                                 </Items>
                                 <Listeners>
                                 </Listeners>

@@ -12,7 +12,7 @@ Public Class EdicionPersona
     Private _idPersona As Int32 = 0
 #End Region
 
-#Region "Metodos Direct"
+#Region "Metodos Directos"
     <DirectMethod>
     Public Function grabarVecino(ByVal nombre As String,
                                         ByVal apellido As String,

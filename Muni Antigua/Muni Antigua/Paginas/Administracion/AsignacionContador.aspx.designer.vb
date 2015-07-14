@@ -59,40 +59,31 @@ Partial Public Class AsignacionContador
     Protected WithEvents lblNumero As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control txtDPI.
+    '''Control cboVecino.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtDPI As Global.Ext.Net.TextField
+    Protected WithEvents cboVecino As Global.Ext.Net.ComboBox
 
     '''<summary>
-    '''Control btnEjecutarConsulta.
+    '''Control StoreVecinos.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnEjecutarConsulta As Global.Ext.Net.Button
+    Protected WithEvents StoreVecinos As Global.Ext.Net.Store
 
     '''<summary>
-    '''Control lblNombres.
+    '''Control ModeloPersona.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblNombres As Global.Ext.Net.TextField
-
-    '''<summary>
-    '''Control lblApellidos.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lblApellidos As Global.Ext.Net.TextField
+    Protected WithEvents ModeloPersona As Global.Ext.Net.Model
 
     '''<summary>
     '''Control txtDireccion.
@@ -102,15 +93,6 @@ Partial Public Class AsignacionContador
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtDireccion As Global.Ext.Net.TextField
-
-    '''<summary>
-    '''Control txtIdPersona.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtIdPersona As Global.Ext.Net.TextField
 
     '''<summary>
     '''Control txtIdContador.

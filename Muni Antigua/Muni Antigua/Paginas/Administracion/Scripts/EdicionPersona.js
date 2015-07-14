@@ -2,7 +2,6 @@
     window.parent.cerrarVentanaVecinos();
 },
 
-
 registrarVecino = function (form) {
     if (form.isValid()) {
         var dpi = App.txtDPI.value;

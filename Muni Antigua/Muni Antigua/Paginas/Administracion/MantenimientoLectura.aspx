@@ -51,9 +51,9 @@
                                     <Fields>
                                         <ext:ModelField Name="id_lectura" />
                                         <ext:ModelField Name="id_contador" />
-                                        <ext:ModelField Name="numero_contador" />
-                                        <ext:ModelField Name="fecha_inicio" />
-                                        <ext:ModelField Name="fecha_fin" />
+                                        <ext:ModelField Name="numero" />
+                                        <ext:ModelField Name="fecha_inicio" Type="String" />
+                                        <ext:ModelField Name="fecha_fin" Type="String" />
                                         <ext:ModelField Name="lectura_actual" />
                                         <ext:ModelField Name="lectura_anterior" />
                                         <ext:ModelField Name="consumo" />
@@ -66,11 +66,11 @@
                     <ColumnModel ID="ColumnModel3" runat="server">
                         <Columns>
                             <ext:RowNumbererColumn ID="numerar" runat="server" />
-                            <ext:Column ID="Column1" runat="server" Text="Número Contador" DataIndex="numero_contador" Flex="1" >
+                            <ext:Column ID="Column1" runat="server" Text="Número Contador" DataIndex="numero" Flex="1" >
                                     <Items>
                                         <ext:TextField ID="txtFiltroNumero" runat="server">
                                         <Listeners>
-                                            <Change Handler="Filtrar('numero_contador');" Buffer="250" />
+                                            <Change Handler="Filtrar('numero');" Buffer="250" />
                                         </Listeners>
                                         <Plugins>
                                             <ext:ClearButton ID="txtLimpiarNumero" runat="server" />

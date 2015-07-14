@@ -266,6 +266,8 @@
     <Content Include="Paginas\Administracion\Scripts\MantenimientoPersona.js" />
     <Content Include="Paginas\Administracion\Scripts\MantenimientoLectura.js" />
     <Content Include="Paginas\PaginaPrincipal\PaginaPrincipal.aspx" />
+    <Content Include="Paginas\Servicios\PagosAgua.aspx" />
+    <Content Include="Paginas\Servicios\Scripts\PagosAgua.js" />
     <Content Include="PanelPrincipal.aspx" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -349,6 +351,8 @@
     <Compile Include="Clases\clsComunes.vb" />
     <Compile Include="Clases\ControladorAsignacionContador.vb" />
     <Compile Include="Clases\ControladorMantenimientoContador.vb" />
+    <Compile Include="Clases\ControladorMantenimientoLectura.vb" />
+    <Compile Include="Clases\ControladorMantenimientoPagoAgua.vb" />
     <Compile Include="Clases\ControladorMantenimientoPersona.vb" />
     <Compile Include="Contact.aspx.designer.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -440,6 +444,13 @@
     </Compile>
     <Compile Include="Paginas\PaginaPrincipal\PaginaPrincipal.aspx.vb">
       <DependentUpon>PaginaPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Servicios\PagosAgua.aspx.designer.vb">
+      <DependentUpon>PagosAgua.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Servicios\PagosAgua.aspx.vb">
+      <DependentUpon>PagosAgua.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="PanelPrincipal.aspx.designer.vb">

@@ -14,28 +14,28 @@ Public Class AsignacionContador
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         obtenerParametros()
         If Not Page.IsPostBack And Not Ext.Net.X.IsAjaxRequest Then
+            obtenerValoresIniciales()
             OperarPagina(accion, id_contador)
         End If
     End Sub
 
-#Region "Metodo Directos"
-    <DirectMethod>
-    Public Function obtenerRegistroPersona(ByVal dpi As String) As Boolean
+#Region "Metodos Privados"
+    Public Sub obtenerValoresIniciales()
+        llenarComboVecinos()
+    End Sub
+
+    Private Sub llenarComboVecinos()
         Try
             Dim accesoDatos As New ControladorAsignacionContador
-            Dim tabla As DataTable = accesoDatos.obtenerRegistroPersona(dpi)
-            If tabla.Rows.Count <> 0 Then
-                Dim fila = tabla.Rows(0)
-                lblNombres.Value = fila("nombre")
-                lblApellidos.Value = fila("apellido")
-                txtIdPersona.Value = fila("id_persona")
-                Return True
-            End If
+            StoreVecinos.DataSource = accesoDatos.obtenerVecinos()
+            StoreVecinos.DataBind()
         Catch ex As Exception
             Throw ex
         End Try
-        Return False
-    End Function
+    End Sub
+#End Region
+
+#Region "Metodo Directos"
 
     <DirectMethod>
     Public Function grabarAsignacionContador(ByVal accion As String,
@@ -64,6 +64,8 @@ Public Class AsignacionContador
                     Dim fila = tabla.Rows(0)
                     lblNumero.Value = fila("numero")
                     txtIdContador.Value = fila("id_contador")
+
+
 
                 End If
             End If
